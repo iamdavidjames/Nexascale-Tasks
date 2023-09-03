@@ -1,0 +1,136 @@
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --bg-color--: hsl(0, 100%, 74%);
+    --color--:white;
+    --span-color--:hsl(249, 54%, 33%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: none;
+    margin: none;
+}
+
+body {
+    background-image: url(task-1\ images/bg-intro-desktop.png);
+    background-color: var(--bg-color--);
+    color: var(--color--);
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    /*flex-direction: row;*/
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    /*border: 10px solid blue;*/
+    display: flex;
+    flex-direction: row;
+}
+
+span {
+    color: var(--span-color--);
+}
+
+.text-side {
+    width: 50%;
+    height: 50%;
+    margin: 15% 5px 0 20px;
+    /*border: 5px solid red;*/
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.form-side {
+    /* border: 3px solid white; */
+    margin-left: 30px;
+    width: 600px;
+}
+
+.btn {
+    background-color: rgba(137, 43, 226, 0.884);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 50px;
+    margin-left: 90px;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.btn-span {
+    font-weight: bold;
+    font-style: italic;
+}
+
+form, .form-inside {
+    width: 400px;
+    height: 410px;
+    margin-left: 90px;
+    /*margin-top: 60px;*/
+    padding-top: 40px;
+    padding-left: 20px;
+    background-color: #CDFFF9;
+    border-radius: 10px;
+    /*border: 2px solid green;*/
+}
+
+input {
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    width: 340px;
+    border-radius: 5px;
+    border: none;
+}
+
+button[type= "submit"] {
+    background-color: rgba(8, 172, 2, 0.678);
+    color: white;
+    width: 340px;
+    margin-top: 25px;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 12px;
+    border: none;
+}
+
+form > p {
+    font-size: 9px;
+    font-weight: bold;
+    color: black;
+    margin-left: 18px;
+}
+
+a, .form-span-p {
+    color: red;
+    text-decoration: none;
+}
+
+input:hover {
+    box-shadow: 2px 2px 5px black;
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 5px rgba(137, 43, 226, 0.884)
+}
+
+button:hover {
+    box-shadow: 2px 2px 5px rgba(8, 172, 2, 0.678);
+}
+
+.btn:active {
+    border: 1px white solid;
+}
