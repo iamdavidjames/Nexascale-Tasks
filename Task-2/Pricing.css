@@ -1,9 +1,127 @@
 :root {
-    --color1: #5757b5;
-    --color2: #ffff;
-    --color3: #4f4f8f;
+    --card-color1: #5757b5;
+    --color-text: #3a3dcf;
+    --card-color2: #ffff;
+    --bg-color: #cbcbdb;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    background-color: var(--color2);
+    display: block;
+    justify-self: center;
+    /* height: 100%; */
+    width: 100%;
+    margin: 5px;
+    background-color: var(--bg-color);
 }
+
+.h1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: var(--color-text);
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin-bottom: 30px;
+    color: var(--card-color1);
+}
+
+h2 {
+    margin: 20px;
+}
+
+/* toggle switch */
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 120px;
+    height: 50px;
+    background: var(--color-text);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+  
+  label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+  
+  input:checked + label {
+    background: var(--card-color1);
+  }
+  
+  input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+  
+  label:active:after {
+    width: 40px;
+  }
+
+  /* price container */
+  .price-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    padding: 50px 0 50px 0;
+    margin: 10px;
+    /* height: auto; */
+  }
+  
+  .price-items {
+    width: 350px;
+    height: 600px;
+    border-radius: 5%;
+  }
+
+  .price-items:nth-child(odd) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: center;
+    order: 0;
+    background-color: var(--card-color2);
+  }
+  
+  .price-items:nth-child(even) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    height: 650px;
+    background-color: var(--card-color1);
+  }
